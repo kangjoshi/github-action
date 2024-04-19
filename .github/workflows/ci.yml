@@ -4,11 +4,11 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
-  schedule:
-    - "* 1 * * *"
+  #pull_request:
+  #  branches:
+  #   - main
+  #schedule:
+  #  - "* 1 * * *"
 
 jobs:
   build:
@@ -16,6 +16,7 @@ jobs:
     permissions:
       contents: read
       packages: write
+
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 17
