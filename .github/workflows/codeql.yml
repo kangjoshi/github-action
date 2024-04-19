@@ -46,3 +46,14 @@ jobs:
         uses: github/codeql-action/analyze@v3
         with:
           category: "/language:${{matrix.language}}"
+      - name: Post dooray task
+        uses: wagstyle/dooray-action.post-task@v1.0.0
+        env:
+          PROJECT_ID: 2824926192079469133
+          AUTHORIZATION_TOKEN: ajjt1imxmtj4:CFdX1hyhTo6TTaUs5h88hg
+          SUBJECT: Release ${{ github.ref_name }}
+          CONTENT: ${{ github.event.release.body }}
+
+
+
+
