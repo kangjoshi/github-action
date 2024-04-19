@@ -3,13 +3,11 @@ package com.example.githubaction;
 public class CodeSmell {
 
   public void ignoredException() {
-
     try {
       System.out.println("hello world");
     } catch (Exception e) {
 
     }
-
   }
 
   public void unUsedVariables() {
